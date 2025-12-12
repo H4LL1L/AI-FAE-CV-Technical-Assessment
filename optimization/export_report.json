@@ -1,0 +1,34 @@
+{
+  "model": "models/model.onnx",
+  "source_checkpoint": "models/last.pt",
+  "opset": 12,
+  "dynamic_axes": ["batch", "height", "width"],
+  "export_tool": "ultralytics.export(format=onnx, dynamic=True, opset=12)",
+  "validation": {
+    "data": "training/dataset.yaml",
+    "device": "cpu",
+    "provider": "onnxruntime CPUExecutionProvider",
+    "imgsz": 640,
+    "metrics": {
+      "precision": 0.646,
+      "recall": 0.539,
+      "map50": 0.581,
+      "map50_95": 0.346
+    },
+    "speed_ms_per_image": {
+      "preprocess": 1.2,
+      "inference": 94.4,
+      "postprocess": 0.5
+    },
+    "dataset": {
+      "images": 300,
+      "instances": 1220
+    },
+    "runs_dir": "runs/detect/val"
+  },
+  "timestamp": "2025-12-10T00:56:00"
+}
+
+
+
+

@@ -1,0 +1,1 @@
+python /Users/ibrahimhalil/Desktop/cv-advanced-assessment/optimization/benchmarks.py --model /Users/ibrahimhalil/Desktop/cv-advanced-assessment/models/last.pt --source /Users/ibrahimhalil/Desktop/cv-advanced-assessment/video.mp4 --device cpu --imgsz 640 --max-frames 200 --warmup 10 --output /Users/ibrahimhalil/Desktop/cv-advanced-assessment/optimization/benchmark_results.json

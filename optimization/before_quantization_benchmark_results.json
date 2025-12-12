@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "model": "/Users/ibrahimhalil/Desktop/cv-advanced-assessment/models/last.pt",
+    "source": "/Users/ibrahimhalil/Desktop/cv-advanced-assessment/video.mp4",
+    "device": "cpu",
+    "imgsz": 640,
+    "conf": 0.25,
+    "iou": 0.45,
+    "warmup_frames_requested": 10,
+    "warmup_frames_ran": 10,
+    "max_frames_requested": 200,
+    "frames_in_video": 1283
+  },
+  "counts": {
+    "frames_processed": 200
+  },
+  "latency_ms": {
+    "avg": 71.23352124508529,
+    "p50": 70.14685399917653,
+    "p95": 76.96637355038546
+  },
+  "preprocess_ms": {
+    "avg": 1.0693287447065813,
+    "p50": 1.0356459970353171,
+    "p95": 1.2552538464660754
+  },
+  "postprocess_ms": {
+    "avg": 0.616859215151635,
+    "p50": 0.6103955092839897,
+    "p95": 0.8130646041536237
+  },
+  "wall_ms": {
+    "avg": 73.25613352979417,
+    "p50": 72.09602100192569,
+    "p95": 80.0308854530158
+  },
+  "throughput_fps": 13.650734099872848,
+  "gpu": null,
+  "timestamp": "2025-12-10 00:46:16"
+}

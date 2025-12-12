@@ -1,0 +1,21 @@
+path: /content/data_raw/100325_matsumoto_labelImg_temiz
+
+# Images live under images/train and images/val; labels are expected at labels/train and labels/val.
+train: images/train
+val: images/val
+# test: images/test  # uncomment if test split exists
+
+names:
+  0: bridge
+  1: chocks
+  2: aircraft
+  3: fuselage
+  4: head
+  5: tail
+  6: fueling truck
+  7: baggage door
+  8: baggage belt loader
+  9: truck
+  10: pushback
+  11: deicing
+  12: object 1
