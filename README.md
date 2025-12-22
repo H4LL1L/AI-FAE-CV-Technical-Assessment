@@ -127,13 +127,13 @@ Environment variables for the FastAPI service:
 
 ```mermaid
 flowchart LR
-  A[Frame (BGR)] --> B[Detector\n(PT / ORT / TRT)]
-  B --> C[Postprocess + NMS]
-  C --> D[Tracker\n(ByteTrackLite)]
-  D --> E[FusionEngine\nZones & Queues]
-  E --> F[FastAPI Response]
-  F --> G[JsonlLogger + FPSMeter]
-  G --> H[/metrics & /dashboard]
+  A["Frame (BGR)"] --> B["Detector<br/>(PT / ORT / TRT)"]
+  B --> C["Postprocess + NMS"]
+  C --> D["Tracker<br/>(ByteTrackLite)"]
+  D --> E["FusionEngine<br/>Zones & Queues"]
+  E --> F["FastAPI Response"]
+  F --> G["JsonlLogger + FPSMeter"]
+  G --> H["/metrics & /dashboard"]
 ```
 
 ## Repository Layout
@@ -160,10 +160,10 @@ Note: Numbers vary by hardware, input size, video source, and postprocess load; 
 
 ## Optimization Flow
 
-1) **PyTorch → ONNX**: `optimization/export_to_onnx.py`
-2) **INT8 calibration cache**: `optimization/calibrate_int8.py`
-3) **TensorRT FP16/INT8 engine**: `optimization/build_trt_engine.py`
-4) **Benchmarks**: `optimization/benchmarks.py` (video-based), `optimization/benchmarks.py` (TRT engine-based)
+1. **PyTorch → ONNX**: `optimization/export_to_onnx.py`
+2. **INT8 calibration cache**: `optimization/calibrate_int8.py`
+3. **TensorRT FP16/INT8 engine**: `optimization/build_trt_engine.py`
+4. **Benchmarks**: `optimization/benchmarks.py` (video-based), `optimization/benchmarks.py` (TRT engine-based)
 
 ## Docker (recommended for GPU/TensorRT)
 
@@ -181,5 +181,3 @@ pytest -q
 ```
 
 Tests automatically `skip` when certain backends or model files are missing (e.g. `onnxruntime`, `torch`, models).
-
-
